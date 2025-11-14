@@ -48,7 +48,7 @@ function solution(N, M, priorities) {
 
     // - 존재하지 않는다면(인쇄가 가능하다면), 인쇄 횟수를 1증가시킨다
     answer++;
-    // 만약 찾고자 하는 값이라면 리턴한다
+    // 만약 찾고자 하는 값이라면 리턴한다 (order이 0보다 작아진 상황이라면 찾고자 하는 값이 pop됐음을 의미)
     if (order < 0) {
       return answer;
     }
