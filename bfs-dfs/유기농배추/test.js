@@ -29,6 +29,7 @@ function solution(M, N, K, positions) {
 
     const queue = [];
     queue.push(position);
+    visited.add(`${x},${y}`);
     while (queue.length !== 0) {
       const [x, y] = queue.pop();
       for (const [dx, dy] of offset) {
@@ -36,7 +37,7 @@ function solution(M, N, K, positions) {
         const ny = y + dy;
         if (nx < 0 || ny < 0) continue;
         // ny가 세로길이, nx가 가로길이를 넘어가면 안됨
-        if (nx > M || ny > N) continue;
+        if (nx > M - 1 || ny > N - 1) continue;
         if (!positionSet.has(`${nx},${ny}`)) continue;
         if (visited.has(`${nx},${ny}`)) continue;
 
