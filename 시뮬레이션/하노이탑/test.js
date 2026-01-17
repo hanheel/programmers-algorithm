@@ -19,3 +19,9 @@ function hanoi(n, from, to, aux, result) {
 
   return result;
 }
+
+// DP 풀이도 가능
+// - 사실상 자신의 위에 있는 n-1개를 aux로 옮기고
+// - 마지막 한개를 3으로 옮기고
+// - 다시 n-1개를 aux에서 3으로 옮긴다
+// dp[n] = dp[n-1]*2 +1
